@@ -1,0 +1,482 @@
+[
+    {
+        "model": "courses.course",
+        "pk": 1,
+        "fields": {
+            "title": "Engineering Mathematics - I",
+            "course_code": "MTH 112",
+            "description": "This course covers engineering mathematics concepts.",
+            "semester": "1st"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 2,
+        "fields": {
+            "title": "Chemistry",
+            "course_code": "CHM 111",
+            "description": "This course focuses on chemistry principles.",
+            "semester": "1st"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 3,
+        "fields": {
+            "title": "Communication Technique",
+            "course_code": "ENG 111",
+            "description": "This course covers communication techniques.",
+            "semester": "1st"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 4,
+        "fields": {
+            "title": "Programming in C",
+            "course_code": "CMP 113",
+            "description": "This course focuses on programming in the C language.",
+            "semester": "1st"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 5,
+        "fields": {
+            "title": "Basic Electrical Engineering",
+            "course_code": "ELE 110",
+            "description": "This course covers basic electrical engineering concepts.",
+            "semester": "1st"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 6,
+        "fields": {
+            "title": "Mechanical Workshop",
+            "course_code": "MEC 110",
+            "description": "This course involves practical work in a mechanical workshop.",
+            "semester": "1st"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 7,
+        "fields": {
+            "title": "Engineering Mathematics - II",
+            "course_code": "MTH 114",
+            "description": "This course is a continuation of engineering mathematics.",
+            "semester": "2nd"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 8,
+        "fields": {
+            "title": "Physics",
+            "course_code": "PHY 111",
+            "description": "This course focuses on physics principles.",
+            "semester": "2nd"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 9,
+        "fields": {
+            "title": "Engineering Drawing",
+            "course_code": "MEC 120",
+            "description": "This course covers engineering drawing techniques.",
+            "semester": "2nd"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 10,
+        "fields": {
+            "title": "Object Oriented Programming C++",
+            "course_code": "CMP 115",
+            "description": "This course focuses on object-oriented programming using C++.",
+            "semester": "2nd"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 11,
+        "fields": {
+            "title": "Thermal Science",
+            "course_code": "MEC 111",
+            "description": "This course covers thermal science concepts.",
+            "semester": "2nd"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 12,
+        "fields": {
+            "title": "Applied Mechanics",
+            "course_code": "MEC 130",
+            "description": "This course focuses on applied mechanics principles.",
+            "semester": "2nd"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 13,
+        "fields": {
+            "title": "Engineering Mathematics - III",
+            "course_code": "MTH 212",
+            "description": "This course is a continuation of engineering mathematics.",
+            "semester": "3rd"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 14,
+        "fields": {
+            "title": "Data Structure and Algorithms",
+            "course_code": "CMP 225",
+            "description": "This course covers data structures and algorithms.",
+            "semester": "3rd"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 15,
+        "fields": {
+            "title": "Electrical Engineering Material",
+            "course_code": "ELE 210",
+            "description": "This course focuses on electrical engineering materials.",
+            "semester": "3rd"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 16,
+        "fields": {
+            "title": "Network Theory",
+            "course_code": "ELE 211",
+            "description": "This course covers network theory principles.",
+            "semester": "3rd"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 17,
+        "fields": {
+            "title": "Electronics Device and Circuits",
+            "course_code": "ELX 211",
+            "description": "This course focuses on electronics devices and circuits.",
+            "semester": "3rd"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 18,
+        "fields": {
+            "title": "Logic Circuits",
+            "course_code": "ELX 212",
+            "description": "This course covers logic circuits concepts.",
+            "semester": "3rd"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 19,
+        "fields": {
+            "title": "Engineering Mathematics - IV",
+            "course_code": "MTH 214",
+            "description": "This course is a continuation of engineering mathematics.",
+            "semester": "4th"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 20,
+        "fields": {
+            "title": "Instrumentation",
+            "course_code": "ELX 231",
+            "description": "This course focuses on instrumentation techniques.",
+            "semester": "4th"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 21,
+        "fields": {
+            "title": "Database Management System",
+            "course_code": "CMP 226",
+            "description": "This course covers database management systems.",
+            "semester": "4th"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 22,
+        "fields": {
+            "title": "Programming Technology",
+            "course_code": "CMP 211",
+            "description": "This course focuses on programming technologies.",
+            "semester": "4th"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 23,
+        "fields": {
+            "title": "Microprocessor",
+            "course_code": "ELX 230",
+            "description": "This course covers microprocessor concepts.",
+            "semester": "4th"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 24,
+        "fields": {
+            "title": "Project- I",
+            "course_code": "CMP 290",
+            "description": "This course involves the completion of a project.",
+            "semester": "4th"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 25,
+        "fields": {
+            "title": "Numerical Method",
+            "course_code": "MTH 230",
+            "description": "This course covers numerical methods.",
+            "semester": "5th"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 26,
+        "fields": {
+            "title": "Probability and Statistics",
+            "course_code": "MTH 220",
+            "description": "This course focuses on probability and statistics principles.",
+            "semester": "5th"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 27,
+        "fields": {
+            "title": "Operating System",
+            "course_code": "CMP 330",
+            "description": "This course covers operating systems concepts.",
+            "semester": "5th"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 28,
+        "fields": {
+            "title": "Computer Architecture",
+            "course_code": "CMP 332",
+            "description": "This course focuses on computer architecture principles.",
+            "semester": "5th"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 29,
+        "fields": {
+            "title": "Computer Graphics",
+            "course_code": "CMP 241",
+            "description": "This course covers computer graphics techniques.",
+            "semester": "5th"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 30,
+        "fields": {
+            "title": "Theory of Computation",
+            "course_code": "CMP 326",
+            "description": "This course focuses on the theory of computation.",
+            "semester": "5th"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 31,
+        "fields": {
+            "title": "Simulation and Modeling",
+            "course_code": "CMP 350",
+            "description": "This course covers simulation and modeling techniques.",
+            "semester": "6th"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 32,
+        "fields": {
+            "title": "Data Communication",
+            "course_code": "CMP 340",
+            "description": "This course focuses on data communication principles.",
+            "semester": "6th"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 33,
+        "fields": {
+            "title": "Object Oriented Software Engineering",
+            "course_code": "CMP 320",
+            "description": "This course covers object-oriented software engineering concepts.",
+            "semester": "6th"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 34,
+        "fields": {
+            "title": "Embedded System",
+            "course_code": "ELX 312",
+            "description": "This course focuses on embedded systems.",
+            "semester": "6th"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 35,
+        "fields": {
+            "title": "Elective I",
+            "course_code": "None",
+            "description": "This course covers electives.",
+            "semester": "6th"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 36,
+        "fields": {
+            "title": "Project- II",
+            "course_code": "CMP 390",
+            "description": "This course involves completion of 2nd minor project.",
+            "semester": "6th"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 37,
+        "fields": {
+            "title": "Engineering Economics",
+            "course_code": "ECO 411",
+            "description": "This course studying basic economic procedures.",
+            "semester": "7th"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 38,
+        "fields": {
+            "title": "Image Processing & Pattern Recognition",
+            "course_code": "CMP 441",
+            "description": "This course involves image processing and pattern recognition.",
+            "semester": "7th"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 39,
+        "fields": {
+            "title": "Artificial Intelligence",
+            "course_code": "CMP 445",
+            "description": "This course involves learning the basics of AI.",
+            "semester": "7th"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 40,
+        "fields": {
+            "title": "Computer Networks",
+            "course_code": "CMP 335",
+            "description": "This course involves learning the basics of computer networking.",
+            "semester": "7th"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 41,
+        "fields": {
+            "title": "ICT Project Management",
+            "course_code": "CMP 483",
+            "description": "This course involves learning the basics of ict project management.",
+            "semester": "7th"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 42,
+        "fields": {
+            "title": "Elective II",
+            "course_code": "None",
+            "description": "This course involves learning the electives.",
+            "semester": "7th"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 43,
+        "fields": {
+            "title": "Digital Signal Analysis and Processing",
+            "course_code": "CMP 442",
+            "description": "Lorem Ipsum",
+            "semester": "8th"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 44,
+        "fields": {
+            "title": "Social and Professional Issues in IT",
+            "course_code": "CMP 484",
+            "description": "Lorem Ipsum",
+            "semester": "8th"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 45,
+        "fields": {
+            "title": "Organization and Management",
+            "course_code": "MGT 321",
+            "description": "Lorem Ipsum",
+            "semester": "8th"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 46,
+        "fields": {
+            "title": "Information Systems",
+            "course_code": "CMP 481",
+            "description": "Lorem Ipsum",
+            "semester": "8th"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 47,
+        "fields": {
+            "title": "Elective III",
+            "course_code": "None",
+            "description": "Lorem Ipsum",
+            "semester": "8th"
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 48,
+        "fields": {
+            "title": "Project- III",
+            "course_code": "CMP 490",
+            "description": "Final Year Project",
+            "semester": "8th"
+        }
+    }
+]
