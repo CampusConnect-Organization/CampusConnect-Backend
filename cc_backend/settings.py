@@ -29,7 +29,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "thisisanextsecretkeyidontwannaexposethistothepublicpleasehelpmeiamstuckdaddy"
+SECRET_KEY = (
+    "thisisanextsecretkeyidontwannaexposethistothepublicpleasehelpmeiamstuckdaddy"
+)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -40,7 +42,7 @@ ALLOWED_HOSTS = [
     "127.0.0.1",
     "192.168.100.25",
     ".vercel.app",
-    "192.168.17.10"
+    "192.168.17.10",
 ]
 
 # Application definition
@@ -116,9 +118,9 @@ WSGI_APPLICATION = "cc_backend.wsgi.application"
 # }
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
     }
 }
 

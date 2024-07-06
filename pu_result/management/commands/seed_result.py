@@ -24,10 +24,10 @@ class Command(BaseCommand):
                     if symbol_number == "nan":
                         continue
                     result = Result(
-                        symbol_number = symbol_number,
+                        symbol_number=symbol_number,
                         year=year,
                         season=season,
-                        result=subjects
+                        result=subjects,
                     )
 
                     result.save()

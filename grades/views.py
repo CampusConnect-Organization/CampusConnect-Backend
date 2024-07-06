@@ -50,6 +50,20 @@ class ExamListView(APIView):
         )
 
 
+class ExamInstructorListView(APIView):
+    permission_classes = [IsAuthenticated]
+    serializer_class = ExamSerializer
+
+    def get(self, request):
+        exams = Exam.objects.filter(course_session__instructor__user=request.user)
+
+        serializer = self.serializer_class(instance=exams, many=True)
+
+        return CustomResponse.success(
+            data=serializer.data, message="Exams fetched successfully!"
+        )
+
+
 class GradeListView(APIView):
     permission_classes = [IsAuthenticated]
     serializer_class = GradeRecordSerializer
