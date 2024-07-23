@@ -5,6 +5,7 @@ from attendance.views import (
     MarkAttendanceAbsentView,
     MarkAttendancePresentView,
     StudentAttendanceListView,
+    VideoFeedView,
 )
 
 urlpatterns = [
@@ -16,4 +17,5 @@ urlpatterns = [
         StudentAttendanceListView.as_view(),
         name="student-attendance",
     ),
+    path("attendance_video/", VideoFeedView.as_view(), name="attendance-video"),
 ]

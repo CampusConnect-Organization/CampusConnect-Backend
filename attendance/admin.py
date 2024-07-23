@@ -16,7 +16,7 @@ class AttendanceAdmin(admin.ModelAdmin):
 
     def has_delete_permission(self, request, obj=None):
         # Prevent deleting attendance records
-        return False
+        return True
 
     def has_change_permission(self, request, obj=None):
         # Allow changing attendance records

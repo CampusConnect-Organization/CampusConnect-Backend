@@ -36,14 +36,7 @@ SECRET_KEY = (
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    "192.168.1.73",
-    "localhost",
-    "127.0.0.1",
-    "192.168.100.25",
-    ".vercel.app",
-    "192.168.17.10",
-]
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 

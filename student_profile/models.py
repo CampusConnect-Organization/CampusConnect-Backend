@@ -3,6 +3,8 @@ from django.db import models
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
+import numpy as np
+
 from courses.models import Course, CourseEnrollment, StudentCourse
 
 
@@ -41,6 +43,14 @@ class StudentProfile(models.Model):
     is_verified = models.BooleanField(default=False)
     symbol_number = models.CharField(null=True, max_length=50, blank=True)
     semester = models.CharField(choices=SEMESTER_CHOICES, max_length=50)
+    face_encoding = models.BinaryField(null=True, blank=True)
+
+    def save_encoding(self, encoding):
+        self.face_encoding = np.array(encoding).tostring()
+        self.save()
+
+    def get_face_encoding(self):
+        return np.frombuffer(self.face_encoding, dtype=np.float64)
 
     def __str__(self) -> str:  # type: ignore
         return f"{self.full_name}'s Profile"
