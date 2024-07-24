@@ -6,7 +6,6 @@ import face_recognition
 
 from rest_framework.views import APIView
 from rest_framework.permissions import IsAuthenticated
-from rest_framework.parsers import FileUploadParser
 
 from attendance.models import Attendance
 from core.permissions import IsInstructor, IsStudent
@@ -14,7 +13,6 @@ from core.response import CustomResponse
 from student_profile.models import StudentProfile
 from .serializers import AttendanceSerializer, AttendanceViewSerializer
 from rest_framework.request import Request
-from django.utils import timezone
 
 
 class AttendanceListView(APIView):
