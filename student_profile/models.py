@@ -1,3 +1,6 @@
+import cv2
+import face_recognition
+
 from django.contrib.auth import get_user_model
 from django.db import models
 from django.db.models.signals import post_save
@@ -66,6 +69,38 @@ class StudentProfile(models.Model):
 
     def __str__(self) -> str:
         return self.full_name
+
+
+@receiver(post_save, sender=StudentProfile)
+def train_face_recognition(sender, instance, created, **kwargs):
+    if (
+        created and instance.profile_picture
+    ):  # Check if it's a new instance and has a profile picture
+        image_path = instance.profile_picture.path
+        try:
+            # Read the image using OpenCV
+            image = cv2.imread(image_path)
+            if image is None:
+                print(f"Failed to load image: {image_path}")
+                return
+
+            # Convert image from BGR (OpenCV default) to RGB
+            rgb_image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+
+            # Ensure the image is of type uint8
+            if rgb_image.dtype != np.uint8:
+                rgb_image = rgb_image.astype(np.uint8)
+
+            # Perform face encoding
+            face_encodings = face_recognition.face_encodings(rgb_image, model="large")
+
+            if face_encodings:
+                # Assuming `save_encoding` is a method on the StudentProfile model that saves the encoding
+                instance.save_encoding(face_encodings[0])
+            else:
+                print(f"No face found in the image of {instance.full_name}")
+        except Exception as e:
+            print(f"Error processing image {image_path}: {e}")
 
 
 @receiver(post_save, sender=StudentProfile)

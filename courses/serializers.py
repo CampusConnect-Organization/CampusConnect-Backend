@@ -12,6 +12,7 @@ class CourseSerializer(serializers.ModelSerializer):
 class CourseSessionSerializer(serializers.ModelSerializer):
     course = serializers.CharField()
     instructor = serializers.CharField()
+    semester = serializers.CharField(source="course.semester")
 
     class Meta:
         model = CourseSession
@@ -56,6 +57,7 @@ class CourseEnrollmentStudentsSerializer(serializers.ModelSerializer):
     student_name = serializers.CharField(source="student.full_name")
     course_session_name = serializers.CharField(source="course_session.course.title")
     course_session_id = serializers.IntegerField(source="course_session.id")
+    profile_picture = serializers.ImageField(source="student.profile_picture")
 
     class Meta:
         model = CourseEnrollment
@@ -65,6 +67,7 @@ class CourseEnrollmentStudentsSerializer(serializers.ModelSerializer):
             "student_name",
             "course_session_name",
             "course_session_id",
+            "profile_picture",
         ]
 
 

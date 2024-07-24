@@ -14,6 +14,7 @@ from core.response import CustomResponse
 from student_profile.models import StudentProfile
 from .serializers import AttendanceSerializer, AttendanceViewSerializer
 from rest_framework.request import Request
+from django.utils import timezone
 
 
 class AttendanceListView(APIView):
@@ -150,7 +151,7 @@ class VideoFeedView(APIView):
         attendance, created = Attendance.objects.get_or_create(
             course_session_id=course_session,
             student=student,
-            date=today,
+            date__date=today,
             defaults={"status": "present"},
         )
 
