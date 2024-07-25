@@ -1,3 +1,4 @@
+import os
 from django.db import models
 from django.contrib.auth import get_user_model
 
@@ -36,6 +37,17 @@ class InstructorProfile(models.Model):
         return f"{self.first_name} {self.last_name}"
 
     def save(self, *args, **kwargs):
+        try:
+            old_instance = InstructorProfile.objects.get(pk=self.pk)
+            if (
+                old_instance.profile_picture
+                and old_instance.profile_picture != self.profile_picture
+            ):
+                if os.path.isfile(old_instance.profile_picture.path):
+                    os.remove(old_instance.profile_picture.path)
+        except InstructorProfile.DoesNotExist:
+            pass
+
         super().save(*args, **kwargs)
         self.user.type = "instructor"  # type: ignore
         self.user.save()

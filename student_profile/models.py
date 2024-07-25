@@ -1,3 +1,4 @@
+import os
 import cv2
 import face_recognition
 
@@ -59,6 +60,18 @@ class StudentProfile(models.Model):
         return f"{self.full_name}'s Profile"
 
     def save(self, *args, **kwargs):
+        # Check if the profile picture has changed
+        try:
+            old_instance = StudentProfile.objects.get(pk=self.pk)
+            if (
+                old_instance.profile_picture
+                and old_instance.profile_picture != self.profile_picture
+            ):
+                if os.path.isfile(old_instance.profile_picture.path):
+                    os.remove(old_instance.profile_picture.path)
+        except StudentProfile.DoesNotExist:
+            pass
+
         super().save(*args, **kwargs)
         self.user.type = "student"  # type: ignore
         self.user.save()

@@ -54,7 +54,7 @@ class Command(BaseCommand):
 
                     # Perform face encoding
                     face_encodings = face_recognition.face_encodings(
-                        rgb_image.astype("uint8"), model="large"
+                        rgb_image.astype("uint8"), model="small"
                     )
 
                     if face_encodings:

@@ -52,6 +52,30 @@ class InstructorProfileView(APIView):
             data=serializer.data, message="Instructor profile created successfully!"
         )
 
+    def put(self, request: Request):
+        instructor_profile = InstructorProfile.objects.filter(user=request.user).first()
+
+        if not instructor_profile:
+            return CustomResponse.error(
+                message="Instructor profile doesn't exist!",
+                status_code=404,
+            )
+
+        if "profile_picture" not in request.data:
+            return CustomResponse.error(
+                message="Profile picture not provided!",
+                status_code=400,
+            )
+
+        instructor_profile.profile_picture = request.data["profile_picture"]
+        instructor_profile.save()
+
+        serializer = self.view_serializer_class(instance=instructor_profile)
+        return CustomResponse.success(
+            data=serializer.data,
+            message="Profile picture updated successfully!",
+        )
+
 
 class StudentListView(APIView):
     permission_classes = [IsAuthenticated, IsInstructor]

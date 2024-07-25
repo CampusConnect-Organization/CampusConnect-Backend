@@ -49,3 +49,27 @@ class StudentProfileView(APIView):
         return CustomResponse.success(
             data=serializer.data, message="Profile created successfully!"
         )
+
+    def put(self, request: Request):
+        student_profile = StudentProfile.objects.filter(user=request.user).first()
+
+        if not student_profile:
+            return CustomResponse.error(
+                message="Student profile doesn't exist!",
+                status_code=404,
+            )
+
+        if "profile_picture" not in request.data:
+            return CustomResponse.error(
+                message="Profile picture not provided!",
+                status_code=400,
+            )
+
+        student_profile.profile_picture = request.data["profile_picture"]
+        student_profile.save()
+
+        serializer = self.view_serializer_class(instance=student_profile)
+        return CustomResponse.success(
+            data=serializer.data,
+            message="Profile picture updated successfully!",
+        )
